@@ -1,0 +1,75 @@
+
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+
+{% block container %}
+
+
+
+
+<body background="/static/images/opacity_70.png" , style ="background-size: cover;">
+
+
+
+
+<div class = 'container p-3 m-3'>
+    <div class = 'row'>
+        <div class = 'col-5'>
+            <img src="/static/images/{{id}}.JPG" \
+                 style="width:400px;height:430px;" \
+                 class="img-fluid">
+        </div>
+        <div class="col-1"></div>
+        <div class = 'col-5'>
+            <img src="/static/maps/{{id}}.png" \
+                 style="width:400px;height:430px;" \
+                 class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class = 'container p-3 m-3'>
+    <div class = 'row'>
+        <div class = 'col-5'>
+            <h3 align ='center' style = 'color:#0000CD'> category: {{category}}</h3>
+
+        </div>
+
+        <div class="col-1"></div>
+
+        <div class = 'col-5'>
+
+               <h3 align="center" style = 'color:#0000CD'> GPS: ({{N}},{{E}}) </h3>
+
+        </div>
+    </div>
+</div>
+
+      <div class="container">
+
+        <div class='row'>
+
+            <div class="col-2" align="center"  >
+                <footer>
+                <a href="/db" class="btn btn-outline-dark btn">BACK</a>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}
+
+
+</body>
+
+

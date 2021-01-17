@@ -1,0 +1,90 @@
+<p>
+    {% extends 'base.html' %}
+    {% block container %}
+
+    <style>
+
+   body { background-image: url(static/images/opacity_150.png);
+   background-size: cover;
+   }
+
+   table {background-color: #FFFFFF;}
+   footer {background-color : #F8F8FF}
+
+
+
+    </style>
+
+<body>
+
+<div class='container p-3 m-4'>
+</div>
+<table class="table p-2 m-2">
+    <thead>
+    <tr>
+
+        <th align="center"> Image date</th>
+        <th> N`</th>
+        <th> N`</th>
+        <th> N```</th>
+        <th> E`</th>
+        <th> E``</th>
+        <th> E```</th>
+        <th> GPS N</th>
+        <th> GPS E</th>
+        <th><a href='/'>Category</a></th>
+        <th> Show it!</th>
+    <tr>
+    </thead>
+    <tbody>
+
+
+    {% for i in df %}
+
+    <tr>
+
+        <td>{{ i[2] }}</td>
+        <td>{{ i[3] }}</td>
+        <td>{{ i[4] }}</td>
+        <td>{{ i[5] }}</td>
+        <td>{{ i[6] }}</td>
+        <td>{{ i[7] }}</td>
+        <td>{{ i[8] }}</td>
+        <td>{{ i[9] }}</td>
+        <td>{{ i[10] }}</td>
+
+
+        {% if i[11] == 'wasteland' %}
+        <td bgcolor="#FFD700">{{ i[11] }}</td>
+        {% elif i[11] == 'weeds' %}
+
+        <td bgcolor="#FFA07A">{{ i[11] }}</td>
+        {%else %}
+        <td bgcolor="#00FA9A">{{ i[11] }}</td>
+        {%endif%}
+        <td><a href = '/map/{{i[12]}}'>{{i[1]}}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class='container m-2 p-3'>
+</div>
+</body>
+
+
+    <div class="container m-3">
+        <div class = 'row'>
+            <div class="col-6"></div>
+            <footer>
+
+            <p align="right">
+
+            </p>
+
+            </footer>
+        </div>
+    </div>
+
+
+
+{% endblock %}
