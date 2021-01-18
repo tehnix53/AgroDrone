@@ -29,9 +29,13 @@ def drone_map(id):
 def drone_about():
     return render_template('about.html')
 
+@app.route('/upload')
+def drone_upload():
+    return render_template('upload.html')
 
-# app.run('127.0.0.1', 5000, debug=True)
+
+app.run('127.0.0.1', 5000, debug=True)
 
 
-if __name__ == '__main__':
-    app.run()
+#if __name__ == '__main__':
+ #   app.run()
